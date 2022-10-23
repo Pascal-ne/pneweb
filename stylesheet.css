@@ -1,25 +1,34 @@
-<head>
-    <link rel="stylesheet" href="stylesheet.css">
-    <head>
-    <body>
-    <div>
-    <div class="header" >
-        <h1>
-            Pascal ne
-        </h1> 
-    </div>
-     
-    <div class="topnav">
-     <a href="part2.html">page 2 </a> 
-     <a href="part2.html">page 3 </a>
-    </div>
-   <p> one two three four five six seven eight </p>
-    <form>
-        <label for="input1"> input: </label>
-        <input name="input1" type="number"><br>
-       
-    </form>
-           
-    
-     </div>
-     </body>
+body {
+    background-color: rgb(169, 196, 197);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 150%;
+}
+.content {
+    padding: 3vmin;
+    margin: 3vmin;
+    background-color:rgb(255, 255, 255);
+}
+.header {
+padding: 20px;
+text-align: center;
+}
+.topnav{
+   text-align: center;
+    background-color: darkslategrey;
+    overflow: hidden;
+}
+.topnav a {
+    float: left;
+    display: block;
+    color: rgb(255, 255, 255);
+    padding: 14px 16px;
+    text-align: center;
+    text-decoration: none;
+}
+.topnav a:hover{
+    background-color:darkgrey;
+    color:black;
+}
+*{
+    box-sizing: border-box;
+}
