@@ -11,6 +11,8 @@ body {
 .header {
 padding: 20px;
 text-align: center;
+background-color:darkslategray ;
+color:white;
 }
 .topnav{
    text-align: center;
