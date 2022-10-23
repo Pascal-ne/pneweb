@@ -1,0 +1,10 @@
+body {
+    background-color: cadetblue;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 150%;
+}
+.content {
+    padding: 3vmin;
+    margin: 3vmin;
+    background-color: whitesmoke;
+}
