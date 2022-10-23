@@ -1,12 +1,12 @@
 body {
-    background-color: rgb(88, 146, 148);
+    background-color: rgb(169, 196, 197);
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 150%;
 }
 .content {
     padding: 3vmin;
     margin: 3vmin;
-    background-color: whitesmoke;
+    background-color:rgb(255, 255, 255);
 }
 .header {
 padding: 20px;
@@ -14,6 +14,7 @@ text-align: center;
 }
 .topnav{
     background-color: darkslategrey;
+    overflow: hidden;
 }
 .topnav a {
     float: left;
