@@ -1,10 +1,29 @@
 body {
-    background-color: cadetblue;
-    font-family:Arial, Helvetica, sans-serif;    
+    background-color: rgb(88, 146, 148);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 150%;
 }
 .content {
     padding: 3vmin;
     margin: 3vmin;
     background-color: whitesmoke;
+}
+.header {
+padding: 20px;
+text-align: center;
+}
+.topnav{
+    background-color: darkslategrey;
+}
+.topnav a {
+    float: left;
+    display: block;
+    color: aliceblue;
+    padding: 14px 16px;
+    text-align: center;
+    text-decoration: none;
+}
+.topnav a:hover{
+    background-color:darkgrey;
+    color:black;
 }
