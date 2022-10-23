@@ -1,7 +1,6 @@
 body {
     background-color: cadetblue;
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 150%;
+    font-family:Arial, Helvetica, sans-serif;    font-size: 150%;
 }
 .content {
     padding: 3vmin;
