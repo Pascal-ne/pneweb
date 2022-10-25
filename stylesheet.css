@@ -22,8 +22,11 @@ text-align: center;
 background-color:var(--maincol);
 color:var(--textcol);
 border-radius: 25px;
+width:calc(vw +0)
+
 
 }
+
 .topnav{
    text-align: center;
     background-color: white;
@@ -82,6 +85,9 @@ a {
     float:left;
     
 }
+img{
+    width:500;
+}
 @media only screen and (max-width: 830px) {
     .lower{
         float:left;
@@ -95,5 +101,11 @@ a {
     .topnav a{
         float:none;
         width: auto;
+    }
+    img{
+        width:200px;
+    }
+    .header{
+        width:calc(vw + 0)
     }
 }
