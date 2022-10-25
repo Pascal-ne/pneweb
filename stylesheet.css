@@ -86,7 +86,7 @@ a {
     
 }
 img{
-    width:500;
+    width:300px;
 }
 @media only screen and (max-width: 830px) {
     .lower{
@@ -95,8 +95,11 @@ img{
     .textblock{
         width:100%;
     }
+    .lower{
+        width:max-content;
+    }
     body{
-        font-size: 150%;
+        font-size: 125%;
     }
     .topnav a{
         float:none;
@@ -109,3 +112,5 @@ img{
         width:calc(vw + 0)
     }
 }
+
+
