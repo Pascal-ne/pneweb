@@ -1,4 +1,7 @@
-
+:root{
+   --maincol: #B3DEE5;
+   --textcol: #31525B;
+}
 body, html{
     border:0;
 }
@@ -16,8 +19,8 @@ body {
 .header {
 padding: 20px;
 text-align: center;
-background-color: rgb(62, 85, 23);
-color:rgb(0, 0, 0);
+background-color:var(--maincol);
+color:var(--textcol);
 border-radius: 25px;
 
 }
@@ -25,15 +28,15 @@ border-radius: 25px;
    text-align: center;
     background-color: white;
     overflow: hidden;
-    color:rgb(0, 0, 0);
+    color:var(--textcol);
     border-top: 10px;
 }
 .topnav a {
     float:left;
     display: block;
-    color: rgb(0, 0, 0);
+    color: var(--textcol);
     padding: 12px;
-    background-color: darkolivegreen;
+    background-color: var(--maincol);
     text-align: center;
     text-decoration: none;
     border-style: solid;
@@ -44,36 +47,53 @@ border-radius: 25px;
 
 }
 .topnav a:hover{
-    background-color: rgb(125, 173, 41);
-    color:darkolivegreen;
+    background-color: lightblue;
+    color:black;
 }
 *{
     box-sizing: border-box;
 }
-h1{
-    background-color:rgb(0, 0, 0);
-    color:white;
-}
-.lower{ background-color:darkolivegreen;
-    color: white;
+
+.lower{ background-color:var(--maincol);
+    color: var(--textcol);
     border-radius: 25px;
     padding: 0em 25px;
+    width: 25%;
+    float:right;
+    
 
 }
 
 
 a {
     text-decoration: none;
-    color:rgb(255, 255, 255);
+    color:var(--textcol);
     font-weight: bold;
     
 }
 .textblock{
     border-style: solid;
     border-radius: 25px;
-    border-color: darkolivegreen;
+    border-color: var(--maincol);
     padding-left: 25px;
     padding-bottom: 25px;
+    color:var(--textcol);
+    width: 73%;
+    float:left;
     
 }
-
+@media only screen and (max-width: 768px) {
+    .lower{
+        float:left;
+    }
+    .textblock{
+        width:100%;
+    }
+    body{
+        font-size: 200%;
+    }
+    .topnav a{
+        float:none;
+        width: auto;
+    }
+}
