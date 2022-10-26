@@ -1,12 +1,16 @@
 :root{
-   --maincol: #B3DEE5;
-   --textcol: #31525B;
+   --maincol: #ffffff;
+   --textcol: #000000;
+   --blocktextcol:rgb(255, 255, 255);
+   --pagecol:rgb(255, 255, 255);
+   --radius:25px;
+   --mainblockcol:#58709b;
 }
 body, html{
     border:0;
 }
 body {
-    background-color: white;
+    background-color:var(--pagecol);
     font-family:Arial, Helvetica, sans-serif;
     font-size: 100%;
 }
@@ -21,7 +25,7 @@ padding: 20px;
 text-align: center;
 background-color:var(--maincol);
 color:var(--textcol);
-border-radius: 25px;
+border-radius:var(--radius);
 width:calc(vw +0)
 
 
@@ -29,10 +33,14 @@ width:calc(vw +0)
 
 .topnav{
    text-align: center;
-    background-color: white;
+    background-color: var(--pagecol);
     overflow: hidden;
     color:var(--textcol);
     border-top: 10px;
+    
+}
+.topnav img{
+    width:17px;
 }
 .topnav a {
     float:left;
@@ -43,9 +51,11 @@ width:calc(vw +0)
     text-align: center;
     text-decoration: none;
     border-style: solid;
-    border-radius: 25px;
-    border-color:rgb(255, 255, 255);
-    width:calc(93vw / 3)
+    border-radius:var(--radius);
+    border-color:var(--pagecol);
+    width:calc(92vw / 3);
+    
+    
     
 
 }
@@ -57,9 +67,9 @@ width:calc(vw +0)
     box-sizing: border-box;
 }
 
-.lower{ background-color:var(--maincol);
-    color: var(--textcol);
-    border-radius: 25px;
+.lower{ background-color:var(--mainblockcol);
+    color: var(--blocktextcol);
+    border-radius:var(--radius);
     padding: 0em 25px;
     width: 25%;
     float:right;
@@ -70,20 +80,21 @@ width:calc(vw +0)
 
 a {
     text-decoration: none;
-    color:var(--textcol);
+    color:var(--blocktextcol);
     font-weight: bold;
+    font-size: larger;
     
 }
 .textblock{
     border-style: solid;
-    border-radius: 25px;
+    border-radius: var(--radius);
     border-color: var(--maincol);
     padding-left: 25px;
     padding-bottom: 25px;
-    color:var(--textcol);
+    color:var(--blocktextcol);
     width: 73%;
     float:left;
-    
+    background-color:var(--mainblockcol) ;
 }
 img{
     width:300px;
@@ -111,6 +122,7 @@ img{
     .header{
         width:calc(vw + 0)
     }
+    a{
+        font-size: 1em;
+    }
 }
-
-
