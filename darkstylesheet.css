@@ -135,6 +135,10 @@
      }
      body{
          font-size: 125%;
+         background-image: radial-gradient(
+            rgba(255, 255, 255, 0.2) 17%, 
+            transparent 8%
+          );
      }
      .topnav a{
          float:none;
@@ -149,7 +153,5 @@
      a{
          font-size: 1em;
      }
-     :root{
-        
-     }
+   
  }
