@@ -1,1 +1,29 @@
+name: Update Number
 
+on:
+  workflow_dispatch:
+    inputs:
+      number:
+        description: 'The new number to update'
+        required: true
+        default: 0
+
+jobs:
+  update-number:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Update HTML file
+      run: |
+        NUMBER=${{ github.event.inputs.number }}
+        sed -i "s/<p id=\"number\">.*<\/p>/<p id=\"number\">$NUMBER<\/p>/" index.html
+        git config --global user.name 'github-actions'
+        git config --global user.email 'github-actions@github.com'
+        git add index.html
+        git commit -m "Update number to $NUMBER"
+        git push
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
