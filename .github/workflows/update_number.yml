@@ -18,11 +18,16 @@ jobs:
 
     - name: Update HTML file
       run: |
-        # Download the current index.html
-        curl -O index.html
-
-        # Use sed to replace the specific content (the number) with the new message
+        # Print the current HTML content for debugging
+        echo "Current HTML content:"
+        cat index.html
+        
+        # Replace the placeholder with the input message
         sed -i 's/<p id="number">.*<\/p>/<p id="number">${{ github.event.inputs.message }}<\/p>/' index.html
+        
+        # Print the updated HTML content for debugging
+        echo "Updated HTML content:"
+        cat index.html
 
     - name: Commit and push changes
       run: |
