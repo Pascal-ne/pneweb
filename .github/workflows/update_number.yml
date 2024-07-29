@@ -1,32 +1,31 @@
-name: Update Data
+name: Update Webpage
 
 on:
   workflow_dispatch:
     inputs:
-      data:
-        description: 'Data to update'
+      message:
+        description: 'String message to display'
         required: true
-        default: 'exampleString'
+        default: 'Hello, World!'
 
 jobs:
-  update-data:
+  update-webpage:
     runs-on: ubuntu-latest
 
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
 
-    - name: Update data in file
+    - name: Update HTML file
       run: |
-        echo "Updating data to ${{ github.event.inputs.data }}"
-        echo "${{ github.event.inputs.data }}" > data.txt
+        echo "<!DOCTYPE html><html><head><title>Message Display</title></head><body><h2>Temperature: ${{ github.event.inputs.message }}</h2></body></html>" > index.html
 
     - name: Commit and push changes
       run: |
         git config --global user.name 'github-actions'
         git config --global user.email 'github-actions@github.com'
-        git add data.txt
-        git commit -m "Update data to ${{ github.event.inputs.data }}"
+        git add index.html
+        git commit -m "Update webpage with message: ${{ github.event.inputs.message }}"
         git push
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
