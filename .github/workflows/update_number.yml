@@ -18,7 +18,11 @@ jobs:
 
     - name: Update HTML file
       run: |
-        echo "<!DOCTYPE html><html><head><title>Message Display</title></head><body><h2>Temperature: ${{ github.event.inputs.message }}</h2></body></html>" > index.html
+        # Download the current index.html
+        curl -O index.html
+
+        # Use sed to replace the specific content (the number) with the new message
+        sed -i 's/<p id="number">.*<\/p>/<p id="number">${{ github.event.inputs.message }}<\/p>/' index.html
 
     - name: Commit and push changes
       run: |
